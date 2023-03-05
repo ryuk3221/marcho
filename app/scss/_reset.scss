@@ -103,8 +103,7 @@ ol[class]{
   list-style: none;
 }
 img {
-  display: block;
-  width: 100%;
+  
 }
 input,
 button,
@@ -114,4 +113,5 @@ textarea {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
