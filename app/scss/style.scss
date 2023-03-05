@@ -25,12 +25,14 @@
     &:hover{
       color: $acccent-color;
       border-bottom: 1px solid $acccent-color;
+      @extend %roboto-700;
     }
   }
   &__link--active{
     color: $acccent-color;
     border-bottom: 1px solid $acccent-color;
     font-weight: bold;
+    @extend %roboto-700;
   }
 }
 
