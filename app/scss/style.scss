@@ -248,8 +248,17 @@
     margin-bottom: 15px;
     color: $title-color;
   }
+  &__img-left{
+    position: absolute;
+    z-index: -1;
+    transform: translate(-53px,80px);
+  }
+  &__img-right{
+    position: absolute;
+    z-index: -1;
+    transform: translate(1129px, 272px);
+  }
 }
-
 .title {
   @extend %title;
 }
@@ -268,10 +277,13 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 370px);
-    grid-template-rows: repeat(3, 303px);
+    grid-template-rows: repeat(2, 303px);
     gap: 30px;
   }
-  
+  &__item {
+    padding-left: 40px;
+    padding-top: 35px;
+  }
   &__item:nth-child(1) {
     background-image: url('../images/category-bg-1.jpg');
     grid-row-start: span 2;
@@ -279,6 +291,7 @@
   &__item:nth-child(2) {
     background-image: url('../images/category-bg-2.jpg');
     grid-column-start: span 2;
+    padding-top: 105px;
   }
   &__item:nth-child(3) {
     background-image: url('../images/category-bg-3.jpg');
@@ -286,8 +299,68 @@
   &__item:nth-child(4) {
     background-image: url('../images/category-bg-4.jpg');
   }
+  &__item-subtitle {
+    @extend %quicksand-500;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  &__item-subtitle1{
+    color: #5800e4;
+  }
+  &__item-subtitle2{
+    color: #fc4a61;
+  }
+  &__item-subtitle3{
+    color: #ffcf63;
+  }
+  &__item-subtitle4{
+    color: #34c3ff;
+  }
+  &__item-title{
+    @extend %roboto-500;
+    font-size: 22px;
+    color: $title-color;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+  &__item-link{
+    @extend %roboto-400;
+    font-size: 16px;
+    color: $title-color;
+  }
+  &__item-link2{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fc4a61;
+    color: #fc4a61;
+    @extend %roboto-500;
+  }
 }
-
+.popup-video{
+  background-image: url('..//images/popup-bg.png');
+  &__inner{
+    display: flex;
+    padding: 120px 0;
+    align-items: center;
+    gap: 65px;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtitle{
+    color: #fc4a61;
+    @extend %quicksand-500;
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  &__title{
+    margin-bottom: 42px;
+  }
+  &__content-link{
+    @extend %btn;
+    margin-top: 62px;
+    display: inline-block;
+  }
+}
 
 
 @import 'media';
