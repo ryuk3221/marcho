@@ -49,6 +49,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'app/fancybox/jquery.fancybox.min.js',
+    'app/rateyo/jquery.rateyo.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
