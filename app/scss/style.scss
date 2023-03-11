@@ -151,6 +151,16 @@
   }
 }
 
+.top{
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
 
 .top-slider{
   background-image: url('../images/slider-bg.png');
