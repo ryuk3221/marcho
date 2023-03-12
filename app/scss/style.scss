@@ -208,6 +208,64 @@
   }
 }
 
+.form {
+  padding: 120px 0;
+  max-width: 570px;
+  margin: 0 auto;
+  @extend %quicksand-500;
+  color: #909090;
+  &__links{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  &__link{
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    &:last-child{
+      @extend %roboto-700;
+      color: $acccent-color;
+    }
+  }
+  &__text{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &__input{
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: $bg;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: #909090;
+  }
+  &__checkbox-inner{
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #292929;
+    padding: 20px 10px;
+    @extend %roboto-400;
+    margin-bottom: 17px;
+  }
+}
+.lost-pass{
+  color: $acccent-color;
+  @extend %quicksand-500;
+}
+
 
 .top-slider{
   background-image: url('../images/slider-bg.png');
