@@ -208,7 +208,7 @@
   }
 }
 
-.form {
+.form-login {
   padding: 120px 0;
   max-width: 570px;
   margin: 0 auto;
@@ -261,10 +261,70 @@
     margin-bottom: 17px;
   }
 }
+
 .lost-pass{
   color: $acccent-color;
   @extend %quicksand-500;
 }
+
+.form-register {
+  padding: 120px 0;
+  max-width: 570px;
+  margin: 0 auto;
+  @extend %quicksand-500;
+  color: #909090;
+  &__links{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  &__link{
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    &:first-child{
+      @extend %roboto-700;
+      color: $acccent-color;
+    }
+  }
+  &__text{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &__text1{
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__input{
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: $bg;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: #909090;
+  }
+  &__checkbox-inner{
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #292929;
+    padding: 20px 10px;
+    @extend %roboto-400;
+    margin-bottom: 17px;
+  }
+}
+
 
 
 .top-slider{
@@ -722,6 +782,56 @@
     display: flex;
     gap: 150px;
     margin-top: 120px;
+  }
+}
+
+.shop {
+  padding: 120px 0 105px;
+  &__inner {
+    display: flex;
+
+  }
+  &__filters {
+    max-width: 375px;
+  }
+}
+
+.filter {
+  &__item {
+    padding: 35px 30  px 40px;
+    border: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $title-color;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 25px;
+  }
+}
+
+.filter-search {
+  &__input {
+    border: none;
+    background-color: $bg;
+    height: 50px;
+    padding: 0 17px;
+    width: 260px;
+    &::placeholder{
+      @extend %quicksand-500;
+    }
+  }
+  &__btn {
+    background-color: $acccent-color;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    margin-left: -4px;
+    transform: translateY(6px);
+    justify-content: center;
+    align-items: center
   }
 }
 
