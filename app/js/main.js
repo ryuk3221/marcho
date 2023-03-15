@@ -4,14 +4,14 @@ $(function(){
     arrows: false,
     fade: true,
     autoplay: true
-  })
+  });
   $('.product-item__stars').rateYo({
     starWidth: "18px",
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
     // readOnly: true
-  })
+  });
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
       $('.data-from').text(`$${data.from}`);
@@ -21,8 +21,8 @@ $(function(){
       $('.data-from').text(`$${data.from}`);
       $('.data-to').text(`$${data.to}`);
     }
-
-  })
+  });
+  $('.select-style').styler();
 })
 
 
