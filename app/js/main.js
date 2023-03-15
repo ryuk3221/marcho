@@ -12,7 +12,40 @@ $(function(){
     ratedFill: "#ffc35b",
     // readOnly: true
   })
+  $('.js-range-slider').ionRangeSlider({
+    onChange(data) {
+      $('.data-from').text(`$${data.from}`);
+      $('.data-to').text(`$${data.to}`);
+    },
+    onStart(data) {
+      $('.data-from').text(`$${data.from}`);
+      $('.data-to').text(`$${data.to}`);
+    }
+
+  })
 })
+
+
+const myCheckboxes = document.getElementsByClassName('filter-size__input');
+const myText = document.getElementsByClassName('filter-size__text');
+for (let k of myCheckboxes) {
+  k.onchange = func;
+}
+function func() {
+  for (let i = 0; i < myCheckboxes.length; i++) {
+    if (myCheckboxes[i].checked) {
+      myText[i].style.color = '#fe3e57';
+    }
+    else {
+      myText[i].style.color = '#8d8d8d';
+    }
+  }
+}
+
+
+
+
+
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);
@@ -55,3 +88,4 @@ function initializeClock(id, endtime) {
 
 const deadline = '2023-05-11';
 initializeClock('clockdiv', deadline);
+
