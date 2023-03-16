@@ -1115,7 +1115,50 @@
       }
     }
   }
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 30px;
+  }
 }
+
+.jq-selectbox__select *{
+  @extend %quicksand-500;
+  color: $default-color;
+}
+
+.jq-selectbox {
+  li:hover {
+    background-color: #a3abb1;
+  }
+  &__select {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding-right: 30px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  &__trigger {
+    border-left: none;
+  }
+  &__dropdown *{
+    @extend %quicksand-500;
+    color: $default-color;
+  }
+  &__trigger-arrow {
+    width: 10px;
+    height: 5px;
+    border: none;
+    background-image: url('../images/arrow-down.svg');
+  }
+
+}
+
+
+
+
 
 
 @import 'media';
