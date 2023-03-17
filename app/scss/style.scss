@@ -637,10 +637,23 @@
 }
 .product-item{
   max-width: 370px;
+  &__shop-page {
+    min-width: 100%;
+    display: flex;
+    gap: 40px;
+    border: 1px solid #ececec;
+  }
+  &__content-box--list{
+    max-width: 485px;
+
+  }
   &__img-box{
     position: relative;
     height: 370px;
     overflow: hidden;
+    &--list {
+      height: 250px;
+    }
   }
   &__img-box:hover &__link-box {
     transform: translate(-50%,0);
@@ -658,6 +671,7 @@
     left: 50%;
     transform: translate(-50%,200%);
     transition: all .3s;
+    
   }
   &__link{
     padding: 5px 25px;
@@ -672,6 +686,10 @@
   }
   &__image{
     object-fit: cover;
+    &--list {
+      width: 200px;
+      height: 250px;
+    }
   }
   &__title {
     @extend %roboto-400;
@@ -715,6 +733,9 @@
   }
   &__stars {
     margin: 30px auto 20px;
+  }
+  &__text {
+    display: none;
   }
 }
 
@@ -827,7 +848,7 @@
     background-color: $bg;
     height: 50px;
     padding: 0 17px;
-    width: 260px;
+    width: 257px;
     &::placeholder{
       @extend %quicksand-500;
     }
@@ -977,7 +998,7 @@
   &__checkbox--orange {
     background-color: #ff7e00;
   }
-  &__checkbox--black {
+  &__checkbox--black {  
     background-color: #000;
   }
   &__checkbox--purple {
@@ -1090,6 +1111,7 @@
 
 .shop-content {
   width: 100%;
+  
   &__filter {
     border: 1px solid #ececec;
     padding: 20px 25px 20px 30px;
@@ -1119,6 +1141,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px 30px;
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 }
 

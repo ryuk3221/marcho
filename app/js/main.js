@@ -42,10 +42,74 @@ function func() {
   }
 }
 
+//-----скрипты для отображения shop-content-list-----
+const buttonsView = document.querySelectorAll('.shop-content__filter-btn');
+buttonsView[0].addEventListener('click', hideShopContentList);
+buttonsView[1].addEventListener('click', showShopContentList);
+
+
+function showShopContentList() {
+  const shopContentInner = document.querySelector('.shop-content__inner');
+  shopContentInner.classList.add('shop-content__inner--list');
+
+  const shopContentItems = document.querySelectorAll('.product-item');
+  shopContentItems.forEach(function(item) {
+    item.classList.add('product-item__shop-page');
+  })
+
+  document.querySelectorAll('.product-item__text').forEach(function(el){
+    el.style.display = 'block'
+  });
+
+  const productImgBox = document.querySelectorAll('.product-item__img-box');
+  productImgBox.forEach(function(item) {
+    item.classList.add('product-item__img-box--list');
+  })
+
+  const productImg = document.querySelectorAll('.product-item__image');
+  productImg.forEach(function(item) {
+    item.classList.add('product-item__image--list');
+  })
+
+  const productItemContentBox = document.querySelectorAll('.product-item__content-box');
+  productItemContentBox.forEach(function(item) {
+    item.classList.add('product-item__content-box--list')
+  })
+}
+
+
+function hideShopContentList() {
+  const shopContentInner = document.querySelector('.shop-content__inner');
+  shopContentInner.classList.remove('shop-content__inner--list');
+  const shopContentItems = document.querySelectorAll('.product-item');
+  shopContentItems.forEach(function(item) {
+    item.classList.remove('product-item__shop-page');
+  })
+  document.querySelectorAll('.product-item__text').forEach(function(el){
+    el.style.display = 'none'
+  });
+}
+//-----скрипты для отображения shop-content-list-----
+
+
+//-----скрипты для кнопок в shop-content-----
+for (let i of buttonsView) {
+  i.onclick = shopContentShow;
+}
+
+function shopContentShow() {
+  buttonsView.forEach((el) => {
+    el.classList.remove('shop-content__filter-btn--active');
+  })
+  let myBtn = this;
+  myBtn.classList.toggle('shop-content__filter-btn--active');
+}
+//-----скрипты для кнопок в shop-content-----
 
 
 
 
+//-----TIMER-----
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);
@@ -88,4 +152,5 @@ function initializeClock(id, endtime) {
 
 const deadline = '2023-05-11';
 initializeClock('clockdiv', deadline);
+//-----TIMER-----
 
