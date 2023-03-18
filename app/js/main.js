@@ -64,17 +64,57 @@ function showShopContentList() {
   const productImgBox = document.querySelectorAll('.product-item__img-box');
   productImgBox.forEach(function(item) {
     item.classList.add('product-item__img-box--list');
-  })
+  });
 
   const productImg = document.querySelectorAll('.product-item__image');
   productImg.forEach(function(item) {
     item.classList.add('product-item__image--list');
-  })
+  });
 
   const productItemContentBox = document.querySelectorAll('.product-item__content-box');
   productItemContentBox.forEach(function(item) {
     item.classList.add('product-item__content-box--list')
+  });
+
+  const productTitle = document.querySelectorAll('.product-item__title');
+  productTitle.forEach(function(item) {
+    item.classList.add('product-item__title--list');
+  });
+
+  const productItemStars = document.querySelectorAll('.product-item__stars');
+  productItemStars.forEach(function(item) {
+    item.classList.add('product-item__stars--list')
+  });
+
+  const productItemPrice = document.querySelectorAll('.product-item__price');
+  productItemPrice.forEach(function(item) {
+    item.classList.add('product-item__price--list');
+  });
+
+  const productItemText = document.querySelectorAll('.product-item__text');
+  productItemText.forEach(function(item) {
+  item.classList.add('product-item__text--list');
+  });
+
+  document.querySelectorAll('.product-item__btn').forEach(function(item) {
+    item.style.display = 'block';
+  });
+
+  const productItemLinkBox = document.querySelectorAll('.product-item__link-box');
+  productItemLinkBox.forEach(function(item) {
+    item.classList.add('product-item__link-box--list');
   })
+
+  const productLink = document.querySelectorAll('.product-item__link');
+  productLink.forEach(function(item) {
+    item.classList.add('product-item__link--list');
+  })
+  
+  const productLinkHide = document.querySelectorAll('.product-item__link--hide');
+  productLinkHide.forEach(function(item) {
+    item.classList.add('hide');
+  })
+
 }
 
 
@@ -88,6 +128,60 @@ function hideShopContentList() {
   document.querySelectorAll('.product-item__text').forEach(function(el){
     el.style.display = 'none'
   });
+  const productImgBox = document.querySelectorAll('.product-item__img-box');
+  productImgBox.forEach(function(item) {
+    item.classList.remove('product-item__img-box--list');
+  });
+
+  const productImg = document.querySelectorAll('.product-item__image');
+  productImg.forEach(function(item) {
+    item.classList.remove('product-item__image--list');
+  });
+
+  const productItemContentBox = document.querySelectorAll('.product-item__content-box');
+  productItemContentBox.forEach(function(item) {
+    item.classList.remove('product-item__content-box--list')
+  });
+
+  const productTitle = document.querySelectorAll('.product-item__title');
+  productTitle.forEach(function(item) {
+    item.classList.remove('product-item__title--list');
+  });
+
+  const productItemStars = document.querySelectorAll('.product-item__stars');
+  productItemStars.forEach(function(item) {
+    item.classList.remove('product-item__stars--list')
+  });
+
+  const productItemPrice = document.querySelectorAll('.product-item__price');
+  productItemPrice.forEach(function(item) {
+    item.classList.remove('product-item__price--list');
+  });
+
+  const productItemText = document.querySelectorAll('.product-item__text');
+  productItemText.forEach(function(item) {
+  item.classList.remove('product-item__text--list');
+  });
+
+
+  document.querySelectorAll('.product-item__btn').forEach(function(item) {
+    item.style.display = 'none';
+  })
+
+  const productItemLinkBox = document.querySelectorAll('.product-item__link-box');
+  productItemLinkBox.forEach(function(item) {
+    item.classList.remove('product-item__link-box--list');
+  })
+
+  const productLink = document.querySelectorAll('.product-item__link');
+  productLink.forEach(function(item) {
+    item.classList.remove('product-item__link--list');
+  })
+  
+  const productLinkHide = document.querySelectorAll('.product-item__link--hide');
+  productLinkHide.forEach(function(item) {
+    item.classList.remove('hide');
+  })
 }
 //-----скрипты для отображения shop-content-list-----
 
