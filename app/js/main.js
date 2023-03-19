@@ -55,7 +55,7 @@ function showShopContentList() {
   const shopContentItems = document.querySelectorAll('.product-item');
   shopContentItems.forEach(function(item) {
     item.classList.add('product-item__shop-page');
-  })
+  });
 
   document.querySelectorAll('.product-item__text').forEach(function(el){
     el.style.display = 'block'
@@ -103,19 +103,22 @@ function showShopContentList() {
   const productItemLinkBox = document.querySelectorAll('.product-item__link-box');
   productItemLinkBox.forEach(function(item) {
     item.classList.add('product-item__link-box--list');
-  })
+  });
 
   const productLink = document.querySelectorAll('.product-item__link');
   productLink.forEach(function(item) {
     item.classList.add('product-item__link--list');
-  })
+  });
   
   const productLinkHide = document.querySelectorAll('.product-item__link--hide');
   productLinkHide.forEach(function(item) {
     item.classList.add('hide');
-  })
+  });
 
-}
+  document.querySelector('.pagination').style.paddingTop = '0';
+  document.querySelector('.pagination').style.borderTop = 'none';
+
+} 
 
 
 function hideShopContentList() {
@@ -124,7 +127,7 @@ function hideShopContentList() {
   const shopContentItems = document.querySelectorAll('.product-item');
   shopContentItems.forEach(function(item) {
     item.classList.remove('product-item__shop-page');
-  })
+  });
   document.querySelectorAll('.product-item__text').forEach(function(el){
     el.style.display = 'none'
   });
@@ -182,6 +185,9 @@ function hideShopContentList() {
   productLinkHide.forEach(function(item) {
     item.classList.remove('hide');
   })
+
+  document.querySelector('.pagination').style.paddingTop = '40px';
+  document.querySelector('.pagination').style.borderTop = '1px solid #efefef';
 }
 //-----скрипты для отображения shop-content-list-----
 
@@ -203,48 +209,5 @@ function shopContentShow() {
 
 
 
-//-----TIMER-----
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds
-  };
-}
 
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.days');
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-}
-
-const deadline = '2023-05-11';
-initializeClock('clockdiv', deadline);
-//-----TIMER-----
 

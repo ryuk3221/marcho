@@ -1255,7 +1255,51 @@
 .hide {
   display: none;
 }
+.pagination {
+  display: flex;
+  grid-column-start: span 2;
+  justify-content: center;
+  padding-top: 40px;
+  border-top: 1px solid #efefef;
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__prev {
+    margin-right: 47px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 6px;
+      height: 11px;
+      background-image: url('..//images/arrow-prev.svg');
+      position: absolute;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 8px;
+      left: -15px;
+    }
+  }
+  &__next {
+    margin-left: 47px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 6px;
+      height: 11px;
+      background-image: url('..//images/arrow-next.svg');
+      position: absolute;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 8px;
+      right: -15px;
+    }
+  }
 
+}
+.pagination__link--active {
+  color: $acccent-color;
+}
 
 
 

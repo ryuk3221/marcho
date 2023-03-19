@@ -8,4 +8,3 @@ node_moduls/
 node_modules
 npm-debug.*
 package-lock.json
-app/css/*
