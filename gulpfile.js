@@ -49,6 +49,9 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'app/fancybox/jquery.fancybox.min.js',
+    'app/rateyo/jquery.rateyo.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -72,11 +75,19 @@ function images(){
   .pipe(dest('dist/images'))
 }
 
+function minTimer(){
+  return src('app/js/timer.js')
+  .pipe(concat('timer.min.js'))
+  .pipe(uglify())
+  .pipe(dest('app/js'))
+}
+
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.images = images;
 exports.watching = watching;
 exports.build = series(images, build);
+exports.minTimer = minTimer;
 
 exports.default = parallel(styles,scripts,browsersync,watching)
