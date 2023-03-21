@@ -23,6 +23,24 @@ $(function(){
     }
   });
   $('.select-style').styler();
+
+  $('.product-details__subslider').slick({
+    focusOnSelect: true, 
+    slidesToShow: 4,
+    arrows: true,
+    asNavFor: '.product-details__slider',
+    draggable: false, 
+    vertical: true,
+    
+  });
+  $('.product-details__slider').slick({
+    arrows: true,
+    fade: true,
+    asNavFor: '.product-details__subslider',
+    draggable: false, 
+    
+  })
+
 })
 
 

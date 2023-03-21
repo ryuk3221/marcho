@@ -1301,6 +1301,33 @@
   color: $acccent-color;
 }
 
+.product-details {
+  &__inner {
+    
+  }
+  &__subslider {
+    width: 140px;
+    margin-right: 30px;
+  }
+  &__subimg-box{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 30px;
+    img{
+      width: 140px;
+      height: 140px;
+      object-fit: cover,
+    }
+  }
+  &__slider {
+    
+
+  }
+  
+  &__subimg{
+    
+  }
+}
 
 
 
