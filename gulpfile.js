@@ -76,8 +76,8 @@ function images(){
 }
 
 function minTimer(){
-  return src('app/js/timer.js')
-  .pipe(concat('timer.min.js'))
+  return src('app/js/shop.js')
+  .pipe(concat('shop.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
 }
