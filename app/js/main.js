@@ -12,6 +12,13 @@ $(function(){
     ratedFill: "#ffc35b",
     // readOnly: true
   });
+  $('.product-details__stars').rateYo({
+    starWidth: "18px",
+    numStars: 5,
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+  })
+  $('.product-details__number').styler();
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
       $('.data-from').text(`$${data.from}`);
@@ -27,14 +34,14 @@ $(function(){
   $('.product-details__subslider').slick({
     focusOnSelect: true, 
     slidesToShow: 4,
-    arrows: true,
+    arrows: false,
     asNavFor: '.product-details__slider',
     draggable: false, 
     vertical: true,
     
   });
   $('.product-details__slider').slick({
-    arrows: true,
+    arrows: false,
     fade: true,
     asNavFor: '.product-details__subslider',
     draggable: false, 
