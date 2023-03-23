@@ -675,6 +675,7 @@
   }
   &__image{
     object-fit: cover;
+    width: 100%;
     &--list {
       width: 200px;
       height: 250px;
@@ -1302,9 +1303,10 @@
 }
 
 .product-details {
-  padding: 120px 0;
+  
   &__inner {
     display: flex;
+    padding: 120px 0;
   }
   &__subslider {
     width: 140px;
@@ -1601,6 +1603,180 @@
 }
 .jq-number__spin.minus:active {
   box-shadow: none; 
+}
+
+.product-tabs {
+  &__content {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #f0f0f0; 
+  }
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    padding-bottom: 13px;
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $default-color;
+    border-bottom: 1px solid transparent ;
+    &--active {
+      border-bottom: 1px solid $acccent-color;
+      color: $title-color;
+      @extend %roboto-500;
+    }
+  }
+  &__content--hide {
+    display: none;
+  }
+}
+
+.reviews {
+  &__inner{
+    padding-top: 37px;
+  }
+  &__item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 27px;
+  }
+  &__content *{
+    @extend %quicksand-500;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    margin-right: 15px;
+    @extend %roboto-500;
+    color: $title-color;  
+  }
+  &__date {
+    padding-left: 15px;
+    margin-right: auto;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 14px;
+      background-color: $title-color;
+      top: 6px;
+      left: 0;
+    }
+  }
+  &__text {
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    padding-left: 26px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 13px;
+      background-image: url('../images/review-arrow.svg');
+      bottom: 6px;
+      left: 0;
+    }
+  }
+}
+
+.add-review {
+  &__title {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $title-color;
+    margin-bottom: 60px;
+    padding-top: 25px;
+  }
+  &__subtitle {
+    @extend %quicksand-500;
+    color: $title-color;
+    margin-right: 60px;
+  }
+  &__rate-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__label-box {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+    line-height: 1;
+  }
+  &__radio {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+  }
+  &__span {
+    path {
+      fill: #ccccce;
+    }
+  }
+  
+  &__radio:checked + .add-review__span {
+    path {
+      fill: #ffc35b;
+    }
+  }
+  &__input-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  &__input {
+    padding: 10px 20px 10px;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+    color: $default-color;
+    &::placeholder{
+      @extend %quicksand-500;
+      
+    }
+    &:nth-child(3){
+      height: 224px;
+      grid-column-start: span 2;
+    }
+  }
+  &__btn {
+    @extend %btn;
+  }
+
+}
+.related-products{
+  padding: 60px 0 120px;
+  &__inner{
+    display: flex;
+    gap: 30px;
+  }
+  &__img-box {
+    height: 270px;
+  }
+  &__title {
+    @extend %title;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
 }
 
 

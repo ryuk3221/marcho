@@ -17,7 +17,13 @@ $(function(){
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
-  })
+  });
+  $('.reviews__rate').rateYo({
+    starWidth: "18px",
+    numStars: 5,
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+  });
   $('.product-details__number').styler();
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
@@ -49,6 +55,21 @@ $(function(){
   })
 
 })
+
+const tabsBtn = document.querySelectorAll('[data-tab]');
+tabsBtn.forEach(function(item) {
+  item.onclick = function() {
+    const tabsContent = document.querySelectorAll('[data-tab-content]');
+    tabsContent.forEach(function(el) {
+      el.classList.add('product-tabs__content--hide');
+    })
+    document.querySelector(`#${this.dataset.tab}`).classList.remove('product-tabs__content--hide')
+    tabsBtn.forEach(function(el){
+      el.classList.remove('product-tabs__btn--active');
+    });
+    this.classList.add('product-tabs__btn--active')
+  }
+});
 
 
 const myCheckboxes = document.getElementsByClassName('filter-size__input');
