@@ -12,6 +12,19 @@ $(function(){
     ratedFill: "#ffc35b",
     // readOnly: true
   });
+  $('.product-details__stars').rateYo({
+    starWidth: "18px",
+    numStars: 5,
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+  });
+  $('.reviews__rate').rateYo({
+    starWidth: "18px",
+    numStars: 5,
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+  });
+  $('.product-details__number').styler();
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
       $('.data-from').text(`$${data.from}`);
@@ -27,14 +40,14 @@ $(function(){
   $('.product-details__subslider').slick({
     focusOnSelect: true, 
     slidesToShow: 4,
-    arrows: true,
+    arrows: false,
     asNavFor: '.product-details__slider',
     draggable: false, 
     vertical: true,
     
   });
   $('.product-details__slider').slick({
-    arrows: true,
+    arrows: false,
     fade: true,
     asNavFor: '.product-details__subslider',
     draggable: false, 
@@ -42,6 +55,21 @@ $(function(){
   })
 
 })
+
+const tabsBtn = document.querySelectorAll('[data-tab]');
+tabsBtn.forEach(function(item) {
+  item.onclick = function() {
+    const tabsContent = document.querySelectorAll('[data-tab-content]');
+    tabsContent.forEach(function(el) {
+      el.classList.add('product-tabs__content--hide');
+    })
+    document.querySelector(`#${this.dataset.tab}`).classList.remove('product-tabs__content--hide')
+    tabsBtn.forEach(function(el){
+      el.classList.remove('product-tabs__btn--active');
+    });
+    this.classList.add('product-tabs__btn--active')
+  }
+});
 
 
 const myCheckboxes = document.getElementsByClassName('filter-size__input');
