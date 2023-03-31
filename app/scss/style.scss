@@ -1641,7 +1641,7 @@
   }
   &__item {
     display: flex;
-    gap: 30px;
+    gap: 26px;
     margin-bottom: 27px;
   }
   &__content *{
@@ -1930,6 +1930,135 @@
   }
 }
 
+.filter-search__input-box{
+  display: flex;
+}
+.blog-details__input{
+  margin-top: 6px;
+}
+
+.blog-details {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
+  &__main {
+    max-width: 770px;
+
+  }
+  &__content{
+    border: 1px solid #ececec;
+    padding-bottom: 30px;
+  }
+  
+  &__img-box {
+    margin-bottom: 20px;
+
+  }
+  &__info{
+    display: flex;
+    gap: 25px;
+    margin-left: 30px;
+    margin-bottom: 18px;
+  }
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__title {
+    padding-left: 30px;
+    @extend %roboto-500;
+    color: $title-color;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    padding: 0 43px 0 30px;
+    margin-bottom: 25px;
+    @extend %quicksand-500;
+
+  }
+  &__important-info {
+    margin-left: 30px;
+    padding: 40px 20px 40px 37px;
+    background-color: $bg;
+    border-left: 3px solid $acccent-color;
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $title-color;
+    max-width: 712px;
+    margin-bottom: 30px;
+  }
+  &__desc-box {
+    padding: 0 25px 0 30px;
+    display: flex;
+    gap: 30px;
+
+  }
+  &__desc-text {
+    @extend %quicksand-500;
+  }
+  &__author{
+    padding: 30px 0 40px;
+  }
+  &__author-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  &__author-tags {
+    display: flex;
+    align-items: center;
+  }
+  &__author-subtitle {
+    margin-right: 10px;
+    color: $title-color;
+  }
+  &__author-social {
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    a + a{
+      margin-left: 15px;
+    }
+  }
+  &__author-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 35px 0 40px;
+    border-bottom: 1px solid #ececec;
+    p{
+      @extend %quicksand-500;
+    }
+  }
+  &__author-title {
+    font-size: 22px;
+    color: $title-color;
+    @extend %roboto-500;
+    margin-bottom: 20px;
+  }
+  &__comments-title {
+    font-size: 24px;
+    @extend %roboto-700;
+    color: $title-color;
+  }
+  .reviews__inner {
+    border-bottom: 1px solid #ececec;
+    &:last-child{
+      padding-bottom: 10px;
+    }
+  }
+  &__review-title {
+    padding-top: 40px;
+    @extend %roboto-700;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
 
 
 @import 'media';
