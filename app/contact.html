@@ -45,8 +45,29 @@
     </div>
   </header>
   <main class="main">
-    <section>
-      
+    <section class="top">
+      <div class="top__container" style="background-image: url('images/login-bg.jpg');">
+        <div class="container">
+          <h2 class="top__title">CONTACT US</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <div class="contact__map" id="map">
+          
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -178,6 +199,9 @@
       </div>
     </div>
   </footer>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

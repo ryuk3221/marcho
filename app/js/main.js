@@ -256,7 +256,21 @@ function shopContentShow() {
 }
 //-----скрипты для кнопок в shop-content-----
 
+//-----map-----
+let map;
 
+async function initMap() {
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat: 40.75106927018396, lng: -73.98590798562749 },
+    zoom: 12,
+  });
+}
+
+initMap();
+//-----map-----
 
 
 
