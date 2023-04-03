@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/contact.min.css">
+  <title>Document</title>
+</head>
+<body>
+  {% include 'app/module/_header/_header.html'%}
+  <main class="main">
+    <section class="top">
+      <div class="top__container" style="background-image: url('images/login-bg.jpg');">
+        <div class="container">
+          <h2 class="top__title">CONTACT US</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <div class="contact__map" id="map">
+  
+        </div>
+        <div class="contact__inner">
+          <div class="contact__content">
+            <h1 class="contact__title">Feel Free Don’t
+              Hesitate To
+              Contact With Us
+            </h1>
+            <p class="contact__text">
+              Lorem ipsum dolor sit amet, consectetur adingn elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao cumsan lacus vel facilisis
+            </p>
+            <div class="contact__items">
+              <div class="contact__item">
+                <div class="contact__img-box">
+                  <img class="contact__icon" src="images/contact-phone-icon.svg" alt="">
+                </div>
+                <div class="contact__item-box">
+                  <span class="contact__span">+0-123-456-7896</span>
+                  <span class="contact__span">+0-123-456-7896</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__img-box">
+                  <img class="contact__icon" src="images/contact-location-icon.svg" alt="">
+                </div>
+                <div class="contact__item-box">
+                  <span class="contact__span">Ranlon Market 789 Road,</span>
+                  <span class="contact__span">Market Street, Newyork</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__img-box">
+                  <img class="contact__icon" src="images/contact-icon3.svg" alt="">
+                </div>
+                <div class="contact__item-box">
+                  <span class="contact__span">yourmailaddress@gmail.com</span>
+                  <span class="contact__span">companymail@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="contact__form" action="">
+            <h3 class="contact__form-title">Contact Form</h3>
+            <div class="contact__input-box">
+              <input class="contact__form-input" placeholder="Your Name" type="text">
+              <input class="contact__form-input" placeholder="Your E-mail Address" type="text">
+              <input class="contact__form-input" placeholder="Subject" type="text">
+              <textarea class="contact__textarea" placeholder="Message here" name="" ></textarea>
+            </div>
+            <button class="contact__form-btn" >SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include 'app/module/_footer/_footer.html'%}
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
