@@ -1,0 +1,26 @@
+.popup-video{
+  background-image: url('..//images/popup-bg.png');
+  &__inner{
+    display: flex;
+    padding: 120px 0;
+    align-items: center;
+    gap: 65px;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtitle{
+    color: #fc4a61;
+    @extend %quicksand-500;
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  &__title{
+    margin-bottom: 42px;
+  }
+  &__content-link{
+    @extend %btn;
+    margin-top: 62px;
+    display: inline-block;
+  }
+}
