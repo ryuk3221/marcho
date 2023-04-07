@@ -1,3 +1,16 @@
+let x = false;
+const menuBtn = document.querySelector('.header__btn');
+menuBtn.onclick = function() {
+  if (x === false) {
+    document.querySelector('.menu').style.transform = 'translateX(-0%)';
+    x = true;
+  }
+  else {
+    document.querySelector('.menu').style.transform = 'translateX(-100%)';
+    x = false
+  }
+};
+
 $(function(){
   $('.top-slider__inner').slick({
     dots: true,
