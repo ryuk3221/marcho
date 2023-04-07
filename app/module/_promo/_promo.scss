@@ -1,0 +1,54 @@
+.promo{
+  background-image: url('../images/deal-of-day.jpg');
+  &__inner {
+    padding: 160px 0;
+    max-width: 570px;
+    margin-left: auto;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 22px;
+    @extend %quicksand-500;
+    color: $acccent-color;
+    margin-bottom: 30px;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+  &__link{
+    padding: 18px 32px;
+    background-color: transparent;
+    border: 1px solid $acccent-color;
+    color: $title-color;
+  }
+}
+//СТИЛИЗАЦИЯ ТАЙМЕРА
+
+#clockdiv{
+	font-family: inherit;
+	color: #fff;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+#clockdiv > div{
+  width: 120px;
+	max-width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+}
+
+#clockdiv div > span{
+	display: inline-block;
+  font-size: 49px;
+  @extend %roboto-700;
+  color: $title-color;
+}
