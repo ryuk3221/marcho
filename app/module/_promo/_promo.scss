@@ -52,3 +52,65 @@
   @extend %roboto-700;
   color: $title-color;
 }
+
+@media (max-width:1000px){
+  .promo {
+    &__inner {
+      
+      margin: 0 auto;
+    }
+  }
+  
+}
+
+@media (max-width: 800px) {
+  #clockdiv {
+    gap: 15px;
+    justify-content: center;
+  }
+  #clockdiv div {
+    gap: 0;
+    
+  }
+  #clockdiv div > span {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+  #clockdiv div > div {
+    font-size: 12px;
+  }
+  #clockdiv div {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .promo {
+    &__inner {
+      padding: 100px 0;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__link {
+      padding: 13px 20px;
+    }
+  }
+  #clockdiv {
+    gap: 5px;
+    justify-content: center;
+  }
+  #clockdiv div > span {
+    font-size: 20px;
+    line-height: 15px;
+    padding-top: 15px;
+  }
+  #clockdiv div > div {
+    font-size: 12px;
+  }
+  #clockdiv div {
+    width: 60px;
+    height: 60px;
+  }
+}
