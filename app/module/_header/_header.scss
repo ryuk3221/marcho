@@ -107,6 +107,7 @@
     background-color: rgba(0,0,0,0.7);
     height: 100vh;
     opacity: 0;
+    visibility: hidden;
     &__list {
       transition: all .3s;
       width: 45%;
