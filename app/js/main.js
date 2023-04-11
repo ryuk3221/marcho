@@ -1,3 +1,28 @@
+let lastScroll = 0;
+const header = document.querySelector('.header');
+
+const scrollPosition = () => window.pageYOffset;
+const containHide = () => header.classList.contains('hide');
+
+window.addEventListener('scroll', () => {
+  
+  let top = scrollPosition();
+  if (top > lastScroll && !header.classList.contains('hide')) {
+    //scroll down
+    console.log("down");
+    header.classList.add('hide');
+  }
+  else if (top < lastScroll && header.classList.contains('hide')) {
+    console.log('up');
+    header.classList.remove('hide');
+    //scroll up
+  }
+  lastScroll = scrollPosition();
+});
+
+
+
+//-----menu adaptive-----
 let x = false;
 const menuBtn = document.querySelector('.header__btn');
 menuBtn.onclick = function() {
@@ -20,6 +45,8 @@ document.querySelector('.menu').onclick = function() {
   document.querySelector('.menu__list').style.transform = 'translateX(-107%)';
   x = false;
 }
+//-----menu adaptive-----  
+
 
 $(function(){
   $('.top-slider__inner').slick({

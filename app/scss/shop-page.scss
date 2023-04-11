@@ -7,13 +7,14 @@
 @import '../module/_footer/footer';
 @import '../module/_top/top';
 
-
+.filter-search--adaptive {
+  display: none;
+}
 .product-item{
   max-width: 370px;
   
   &__img-box{
     position: relative;
-    height: 370px;
     overflow: hidden;
   
   }
@@ -131,6 +132,7 @@
 }
 .filter {
   margin-right: 30px;
+  position: relative;
   &__item {
     padding: 35px 30px 40px;
     border: 1px solid #ececec;
@@ -429,6 +431,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
   &__filter-buttons{
     display: flex;
@@ -526,7 +529,7 @@
 .product-item__stars--list{
   margin: 0;
   margin-left: -5px;
-  transform: translateX(-85px);
+  
 }
 .product-item__price--list{
   transform: translateY(-2px);
@@ -602,3 +605,24 @@
 .pagination__link--active {
   color: $acccent-color;
 }
+.filter-btn-adaptive-hide {
+  width: 50px;
+  height: 30px;
+  background-image: url('../images/arrow-right-long-solid.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 70px;
+  right: 5px;
+  cursor: pointer;
+  display: none;
+}
+.filters-button{
+  display: none;
+}
+
+@import 'media';

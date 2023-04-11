@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="css/shop-page.min.css">
   <title>Document</title>
 </head>
@@ -30,8 +31,16 @@
     <section class="shop">
       <div class="container">
         <div class="shop__inner">
+          <div class="filter-search filter__item filter-search--adaptive">
+              <h3 class="filter-search__title filter__title">SEARCH</h3>
+              <form class="filter-search__form" action="">
+                <input class="filter-search__input" type="text" placeholder="Search your keyword....">
+                <button class="filter-search__btn" type="submit"><img class="filter-search__img" src="images/search-filter.svg" alt=""></button>
+              </form>
+            </div>
           <div class="shop__filters filter">
-            <div class="filter-search filter__item">
+            <button class="filter-btn-adaptive-hide"></button>
+            <div class="filter-search filter__item filter-search--hide">
               <h3 class="filter-search__title filter__title">SEARCH</h3>
               <form class="filter-search__form" action="">
                 <input class="filter-search__input" type="text" placeholder="Search your keyword....">
@@ -277,6 +286,10 @@
                     <option value="">4</option>
                   </select>
                 </form>
+              </div>
+              <div class="filters-button">
+                <span>Filters</span>
+                <button class="filter-adaptive-btn"><img src="images/filter-btn.svg"></button>
               </div>
             </div>
             <div class="shop-content__inner">
@@ -650,5 +663,6 @@
   </main>
   {% include 'app/module/_footer/_footer.html'%}
   <script src="js/main.min.js"></script>
+  <script src="js/shop-page.js"></script>
 </body>
 </html>
