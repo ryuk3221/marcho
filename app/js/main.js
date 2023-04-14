@@ -2,19 +2,19 @@ let lastScroll = 0;
 const header = document.querySelector('.header');
 
 const scrollPosition = () => window.pageYOffset;
-const containHide = () => header.classList.contains('hide');
+const containHide = () => header.classList.contains('hide-header');
 
 window.addEventListener('scroll', () => {
   
   let top = scrollPosition();
-  if (top > lastScroll && !header.classList.contains('hide')) {
+  if (top > lastScroll && !header.classList.contains('hide-header')) {
     //scroll down
     console.log("down");
-    header.classList.add('hide');
+    header.classList.add('hide-header');
   }
-  else if (top < lastScroll && header.classList.contains('hide')) {
+  else if (top < lastScroll && header.classList.contains('hide-header')) {
     console.log('up');
-    header.classList.remove('hide');
+    header.classList.remove('hide-header');
     //scroll up
   }
   lastScroll = scrollPosition();
