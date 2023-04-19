@@ -55,6 +55,7 @@ $(function(){
     fade: true,
     autoplay: true
   });
+
   $('.product-item__stars').rateYo({
     starWidth: "18px",
     numStars: 5,
@@ -62,19 +63,23 @@ $(function(){
     ratedFill: "#ffc35b",
     // readOnly: true
   });
+
   $('.product-details__stars').rateYo({
     starWidth: "18px",
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
   });
+
   $('.reviews__rate').rateYo({
     starWidth: "18px",
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
   });
+
   $('.product-details__number').styler();
+
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
       $('.data-from').text(`$${data.from}`);
@@ -85,6 +90,7 @@ $(function(){
       $('.data-to').text(`$${data.to}`);
     }
   });
+
   $('.select-style').styler();
 
   $('.product-details__subslider').slick({
@@ -94,13 +100,24 @@ $(function(){
     asNavFor: '.product-details__slider',
     draggable: false, 
     vertical: true,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+          
+        }
+      }
+    ]
   });
 
   $('.product-details__slider').slick({
     arrows: false,
     fade: true,
     asNavFor: '.product-details__subslider',
-    draggable: false, 
+    draggable: false,
+    
   });
 
   $('.blog-list__item-slider').slick({
