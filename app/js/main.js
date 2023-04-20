@@ -302,7 +302,7 @@ function shopContentShow() {
     el.classList.remove('shop-content__filter-btn--active');
   })
   let myBtn = this;
-  myBtn.classList.toggle('shop-content__filter-btn--active');
+  myBtn.classList.toggle('shop-content__filter-btn--active');п
 }
 //-----скрипты для кнопок в shop-content-----
 
