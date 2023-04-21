@@ -1,0 +1,173 @@
+.top{
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 130px 0 132px;
+    display: flex;
+    justify-content: center;
+  }
+  &__title{
+    @extend %roboto-400;
+    font-size: 48px;
+    color: $title-color;
+    margin-bottom: 30px;
+  }
+
+}
+.breadcrumbs{
+  @extend %quicksand-500;
+  color: #828282;
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    margin: 0 20px;
+    position: relative;
+    &:first-child::before{
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/home_icon.svg');
+      position: absolute;
+      bottom: 7px;
+      left: -24px;
+    }
+    &::after{
+      content: '';
+      width: 9px;
+      height: 11px;
+      position: absolute;
+      background-image: url('../images/angle_right.svg');
+      bottom: 7px;
+      right: -25px;
+    }
+  }
+
+  &__item:last-child{
+    color: $acccent-color;
+    &::after{
+      display: none;
+    }
+  }
+}
+
+.form-login {
+  padding: 120px 0;
+  max-width: 570px;
+  margin: 0 auto;
+  @extend %quicksand-500;
+  color: #909090;
+  &__links{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  &__link{
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    &:last-child{
+      @extend %roboto-700;
+      color: $acccent-color;
+    }
+  }
+  &__text{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &__input{
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: $bg;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: #909090;
+  }
+  &__checkbox-inner{
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #292929;
+    padding: 20px 10px;
+    @extend %roboto-400;
+    margin-bottom: 17px;
+  }
+}
+
+.lost-pass{
+  color: $acccent-color;
+  @extend %quicksand-500;
+}
+
+.form-register {
+  padding: 120px 0;
+  max-width: 570px;
+  margin: 0 auto;
+  @extend %quicksand-500;
+  color: #909090;
+  &__links{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  &__link{
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    &:first-child{
+      @extend %roboto-700;
+      color: $acccent-color;
+    }
+  }
+  &__text{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &__text1{
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__input{
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: $bg;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: #909090;
+  }
+  &__checkbox-inner{
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #292929;
+    padding: 20px 10px;
+    @extend %roboto-400;
+    margin-bottom: 17px;
+  }
+}

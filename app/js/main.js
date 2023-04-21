@@ -1,3 +1,53 @@
+let lastScroll = 0;
+const header = document.querySelector('.header');
+
+const scrollPosition = () => window.pageYOffset;
+const containHide = () => header.classList.contains('hide-header');
+
+window.addEventListener('scroll', () => {
+  
+  let top = scrollPosition();
+  if (top > lastScroll && !header.classList.contains('hide-header')) {
+    //scroll down
+    console.log("down");
+    header.classList.add('hide-header');
+  }
+  else if (top < lastScroll && header.classList.contains('hide-header')) {
+    console.log('up');
+    header.classList.remove('hide-header');
+    //scroll up
+  }
+  lastScroll = scrollPosition();
+});
+
+
+
+//-----menu adaptive-----
+let x = false;
+const menuBtn = document.querySelector('.header__btn');
+menuBtn.onclick = function() {
+  if (x === false) {
+    document.querySelector('.menu').style.opacity = '1';
+    document.querySelector('.menu').style.visibility = 'visible';
+    document.querySelector('.menu__list').style.transform = 'translateX(0)';
+    x = true;
+  }
+  else {
+    document.querySelector('.menu').style.opacity = '0';
+    document.querySelector('.menu').style.visibility = 'hidden';
+    document.querySelector('.menu__list').style.transform = 'translateX(-107%)';
+    x = false
+  }
+};
+document.querySelector('.menu').onclick = function() {
+  document.querySelector('.menu').style.opacity = '0';
+  document.querySelector('.menu').style.visibility = 'hidden';
+  document.querySelector('.menu__list').style.transform = 'translateX(-107%)';
+  x = false;
+}
+//-----menu adaptive-----  
+
+
 $(function(){
   $('.top-slider__inner').slick({
     dots: true,
@@ -5,6 +55,7 @@ $(function(){
     fade: true,
     autoplay: true
   });
+
   $('.product-item__stars').rateYo({
     starWidth: "18px",
     numStars: 5,
@@ -12,19 +63,23 @@ $(function(){
     ratedFill: "#ffc35b",
     // readOnly: true
   });
+
   $('.product-details__stars').rateYo({
     starWidth: "18px",
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
   });
+
   $('.reviews__rate').rateYo({
     starWidth: "18px",
     numStars: 5,
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
   });
+
   $('.product-details__number').styler();
+
   $('.js-range-slider').ionRangeSlider({
     onChange(data) {
       $('.data-from').text(`$${data.from}`);
@@ -35,6 +90,7 @@ $(function(){
       $('.data-to').text(`$${data.to}`);
     }
   });
+
   $('.select-style').styler();
 
   $('.product-details__subslider').slick({
@@ -44,14 +100,29 @@ $(function(){
     asNavFor: '.product-details__slider',
     draggable: false, 
     vertical: true,
-    
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+          
+        }
+      }
+    ]
   });
+
   $('.product-details__slider').slick({
     arrows: false,
     fade: true,
     asNavFor: '.product-details__subslider',
-    draggable: false, 
+    draggable: false,
     
+  });
+
+  $('.blog-list__item-slider').slick({
+    prevArrow: '<button type="button" class="slick-prev"><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="14px" viewBox="0 0 9 14" version="1.1"><g id="surface1"><path style=" stroke:none;" d="M 0.332031 6.382812 C -0.109375 6.722656 -0.109375 7.277344 0.332031 7.621094 L 5.957031 11.996094 C 6.394531 12.335938 7.109375 12.335938 7.546875 11.996094 C 7.988281 11.652344 7.988281 11.097656 7.546875 10.757812 L 2.71875 7 L 7.542969 3.242188 C 7.984375 2.902344 7.984375 2.347656 7.542969 2.003906 C 7.105469 1.664062 6.390625 1.664062 5.953125 2.003906 L 0.328125 6.378906 Z M 0.332031 6.382812 "/></g></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="14px" viewBox="0 0 9 14" version="1.1"><g id="surface1"><path style=" stroke:none;" d="M 8.667969 6.382812 C 9.109375 6.722656 9.109375 7.277344 8.667969 7.621094 L 3.042969 11.996094 C 2.605469 12.335938 1.890625 12.335938 1.453125 11.996094 C 1.011719 11.652344 1.011719 11.097656 1.453125 10.757812 L 6.28125 7 L 1.457031 3.242188 C 1.015625 2.902344 1.015625 2.347656 1.457031 2.003906 C 1.894531 1.664062 2.609375 1.664062 3.046875 2.003906 L 8.671875 6.378906 Z M 8.667969 6.382812 "/></g></svg></button>',
   })
 
 })
@@ -248,11 +319,25 @@ function shopContentShow() {
     el.classList.remove('shop-content__filter-btn--active');
   })
   let myBtn = this;
-  myBtn.classList.toggle('shop-content__filter-btn--active');
+  myBtn.classList.toggle('shop-content__filter-btn--active');п
 }
 //-----скрипты для кнопок в shop-content-----
 
+//-----map-----
+let map;
 
+async function initMap() {
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat: 40.75106927018396, lng: -73.98590798562749 },
+    zoom: 12,
+  });
+}
+
+initMap();
+//-----map-----
 
 
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.min.css">
+  <title>Document</title>
+</head>
+<body>
+  {% include 'app/module/_header/_header.html'%}
+  <main class="main">
+    <div class="top__container" style="background-image: url('images/login-bg.jpg');">
+        <div class="container">
+          <h2 class="top__title">LOG IN</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="">Log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <form class="form-login" action="">
+          <div class="form-login__links">
+            <a class="form-login__link" href="register.html">REGISTER</a>
+            <a class="form-login__link" href="#">LOGIN</a>
+          </div>
+          <span class="form-login__text">Username or email address*</span>
+          <input class="form-login__input" type="text">
+          <span class="form-login__text">Password*</span>
+          <input class="form-login__input" type="text">
+          <div class="form-login__checkbox-inner">
+            <input class="form-login__checkbox" type="checkbox" id="checkbox">
+            <label class="form-login__label" for="checkbox">Remember me</label>
+          </div>
+          <button class="form-login__btn">LOG IN</button>
+          <span class="form-login__text lost-pass">Lost your password?</span>
+        </form>
+      </div>
+    
+  </main>
+  {% include 'app/module/_footer/_footer.html'%}
+  <script src="js/main.min.js"></script>
+</body>
+</html>

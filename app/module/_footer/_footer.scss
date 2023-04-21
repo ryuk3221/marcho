@@ -1,0 +1,160 @@
+.footer {
+  background-color: $bg;
+
+}
+
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  &__contact {
+    width: 270px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__links {
+    width: 170px;
+    margin-right: 30px;
+  }
+  &__my-account {
+    width: 170px;
+    margin-right: 30px;
+  }
+  &__last-item {
+    max-width: 470px;
+  }
+  &__logo {
+    margin-bottom: 30px;
+  }
+  &__adress, &__email, &__tel{
+    margin-bottom: 10px;
+  }
+  &__social-list {
+    display: flex;
+    gap: 18px;
+    margin-top: 15px;
+    align-items: center;
+  }
+  &__social-link {
+    transition: all .3s;
+    path {
+      fill: $default-color;
+    }
+    &:hover{
+      path {
+        fill: $acccent-color;
+      }
+    }
+  }
+  &__title {
+    color: $title-color;
+    @extend %roboto-700;
+    font-size: 22px;
+    margin-bottom: 37px;
+  }
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  &__input {
+    border: none;
+    padding: 12px 12px 15px 18px;
+    width: 320px;
+    margin-right: 5px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    @extend %quicksand-500;
+    color: $default-color;
+  }
+  &__btn {
+    @extend %btn;
+  }
+}
+.footer-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 0;
+  &__accept {
+    display: flex;
+    gap: 25px;
+    align-items: center
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-top {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+    &__item {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width:770px) {
+  .footer-bot{
+    flex-direction: column;
+    gap: 30px;
+    &__accept {
+      order: -1;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  %btn {
+    padding: 13px 9px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $acccent-color;
+    @extend %roboto-400;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+  .footer-top__input {
+    
+    padding-left: 10px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 475px) {
+  .footer-top {
+    &__logo {
+      img {
+        width: 153px;
+      }
+    }
+    &__input {
+      margin-right: 0;
+    }
+    
+  }
+}
+@media (max-width: 375px) {
+  .footer-top {
+    &__input {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    
+    }
+    &__btn {
+      display: block;
+      width: 100%;
+    }
+  }
+  .footer-bot {
+    &__accept {      
+      gap: 13px;
+      
+    }
+  }
+}
