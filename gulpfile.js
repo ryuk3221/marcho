@@ -44,8 +44,10 @@ function styles() {
 function build() {
   return src([
     'app/**/*.html',
-    'app/css/style.min.css',
-    'app/js/main.min.js'
+    'app/css/*.css',
+    'app/js/main.min.js',
+    'app/js/shop-page.js',
+    'app/js/shop.js',
   ], {base: 'app'})
   .pipe(dest('dist'))
 }

@@ -127,6 +127,24 @@
   }
 }
 
+.blog-list{
+  &__aside {
+    .filter-search__form {
+      display: flex;
+    }
+    .filter-search__btn {
+      transform: translateY(0);
+    }
+    .filter-search__input {
+      width: 80%;
+    }
+  }
+}
+
+.filter-search-bloglist {
+  display: none;
+}
+
 .filter-search {
   &__input {
     border: none;
@@ -295,3 +313,6 @@
     margin-bottom: 13px;
   }
 }
+
+
+@import '_media';

@@ -49,9 +49,66 @@
     &__info {
       max-width: 560px;
     }
-
   }
-
+  .related-products {
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .product-item{
+      margin: 0 auto;
+    }
+  }
+  .blog-list{
+    &__aside {
+      display: none;
+    }
+  }
+  .filter-search-bloglist {
+    display: block; 
+  }
+  .blog-list {
+    &__inner {
+      flex-direction: column;
+    }
+    &__content{
+      margin-right: 0;
+    }
+    &__item {
+      max-width: 770px;
+    }
+    &__link {
+      display: block;
+      max-width: 770px;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+  .filter-search{
+    &__form {
+      display: flex;
+    }
+    &__btn {
+      transform: translateY(0);
+    }
+    &__input {
+      width: 92%;
+    }
+  }
+  .blog-details {
+    &__inner {
+      .shop-filters {
+        display: none;
+      }
+    }
+    &__img-box {
+      max-width: 770px;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -63,7 +120,7 @@
   }
   .filter-search{
     &__input {
-      width: 90%;
+      width: 92%;
     }
     &--adaptive {
       display: block;
@@ -109,7 +166,11 @@
       transform: translate(-50%, 0);
     }
   }
-  
+  .related-products {
+    &__title {
+      font-size: 40px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -121,12 +182,27 @@
       margin-bottom: 10px;
     }
   }
+  .blog-list {
+    &__item-box {
+      padding: 25px;
+    }
+  }
+  .blog-details {
+    padding: 70px 0;
+    &__desc-box {
+      flex-direction: column;
+    }
+    &__important-info {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
 }
 
 @media (max-width: 620px) {
   .filter-search {
     &__input {
-      max-width: 87%;
+      max-width: 92%;
     }
   }
   .product-item{
@@ -145,6 +221,12 @@
     &__title {
       font-size: 18px;
       margin-bottom: 0;
+    }
+  }
+  .blog-list {
+    &__item-title {
+      font-size: 18px;
+      line-height: 25px;
     }
   }
   .filter {
@@ -166,6 +248,32 @@
       gap: 15px;
     }
   }
+  .related-products {
+    &__title {
+      font-size: 35px;
+    }
+  }
+  .add-review{
+    &__subtitle {
+      margin-right: 20px;
+    }
+    &__label-box{
+      gap: 20px;  
+    }
+  }
+  .blog-details{
+    &__title {
+      font-size: 18px;
+    }
+    &__text, &__desc-text {
+      font-size: 14px;
+    }
+    &__author-content {
+      align-items: flex-start;
+    }
+  }
+
+
 }
 
 @media (max-width: 530px) {
@@ -191,7 +299,7 @@
   }
   .filter-search {
     &__input {
-      max-width: 80%;
+      max-width: 92%;
     }
   }
   .product-details {
@@ -199,13 +307,85 @@
       padding-right: 15px;
     }
   }
+  .related-products {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+  }
+  .product-tabs {
+    &__btn {
+      font-size: 16px;
+    }
+  }
+  .add-review {
+    &__subtitle {
+      display: none;
+    }
+    &__input-box {
+      display: flex;
+      flex-direction: column;
+    }
+    &__label-box {
+      gap: 15px;
+    }
+  }
+  .blog-list {
+    &__item-box {
+      padding: 15px;
+    }
+    &__info {
+      font-size: 14px;
+    }
+    &__item-text {
+      font-size: 14px;
+    }
+    &__item-title {
+      font-size: 16px;
+    }
+    &__item{
+      margin-bottom: 30px;
+    }
+  }
+  .blog-details {
+    &__info {
+      flex-direction: column;
+      gap:0;
+    }
+    &__author-head{
+      padding: 0;
+      gap: 15px;
+    }
+    &__desc-box {
+      max-width: 395px;
+    }
+    &__desc-img {
+      width: 100%;
+    }
+  }
+}
 
+@media (max-width: 435px) {
+  .add-review {
+    &__label-box{
+    display: none;
+    }
+  }
+  .product-tabs {
+    &__btn {
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 375px) {
   .filter-search {
     &__input {
-      max-width: 78%;
+      max-width: 92%;
     }
   }
   .pagination {
@@ -218,5 +398,35 @@
     &__list {
       gap: 10px;
     }
+  }
+  .product-details{
+    &__product-info {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  .reviews{
+    &__img-box {
+      display: none;
+    }
+  }
+  .product-tabs {
+    &__btn {
+      font-size: 12px;
+    }
+  }
+  .blog-list {
+    &__info {
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+    }
+  }
+  .blog-details {
+    &__author-head {
+      flex-direction: column;
+      gap: 5px;
+    }
+      
   }
 }
